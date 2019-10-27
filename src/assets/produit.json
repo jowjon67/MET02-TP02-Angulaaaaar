@@ -4,7 +4,7 @@
         "prixEuro":"150",
         "prixDollars":"165", 
         "categorie":"vetement", 
-        "image":"../assets/images/maillot_houston.jpg",
+        "image":"https://www.cjoint.com/doc/19_10/IJBqvnEGCme_maillot-houston.jpg",
         "couleur":
         [
             "rouge", 
@@ -17,7 +17,7 @@
         "prixEuro":"45",
         "prixDollars":"52", 
         "categorie":"accesoires",
-        "image":"../assets/images/ballon.jpg",
+        "image":"https://www.cjoint.com/doc/19_10/IJBqwCuNdEe_ballon.jpg",
         "couleur":
         [
             "orange", 
