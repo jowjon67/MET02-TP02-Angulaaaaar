@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TetiereComponent } from './tetiere/tetiere.component';
 import { FooterComponent } from './footer/footer.component';
@@ -11,9 +10,24 @@ import { FormsModule} from '@angular/forms';
 import { PhoneNumberPipe } from './phone-numbre.pipe';
 import { ErrorDirective } from './error.directive';
 import { HttpClientModule } from '@angular/common/http';
-import { ListeComponent } from './liste/liste.component';
-import { FiltreProduitsComponent } from './filtre-produits/filtre-produits.component';
-import { TetiereListeProduitsComponent } from './tetiere-liste-produits/tetiere-liste-produits.component';
+
+
+import { PanierComponent } from './modules/panier/panier.component';
+import { RouterModule, Routes } from '@angular/router';
+import { NgxsModule } from '@ngxs/store';
+
+
+import { PanierState } from 'shared/states/panier-state';
+
+
+const appRoutes: Routes = [
+  { path: 'formulaire', component: CompteComponent },
+  { path: 'catalogue', 
+    loadChildren: () => import('./modules/catalogue/catalogue.module').then(m => m.CatalogueModule) 
+  },
+  { path: 'panier', component: PanierComponent}
+  
+];
 
 @NgModule({
   declarations: [
@@ -24,15 +38,19 @@ import { TetiereListeProduitsComponent } from './tetiere-liste-produits/tetiere-
     RecapitulatifComponent,
     PhoneNumberPipe,
     ErrorDirective,
-    ListeComponent,
-    FiltreProduitsComponent,
-    TetiereListeProduitsComponent
+    PanierComponent
   ],
   imports: [
+    NgxsModule.forRoot([
+      PanierState
+    ]),
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

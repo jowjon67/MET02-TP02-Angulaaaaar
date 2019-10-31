@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngxs/store';
 
 @Component({
   selector: 'app-tetiere',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tetiere.component.scss']
 })
 export class TetiereComponent implements OnInit {
+  
+  nbArticles : number;
 
-  constructor() { }
+  constructor(private store: Store) 
+  {
+    this.store.select(state => state.panier.panier).subscribe (u => this.nbArticles = u.length);
+  }
+
 
   ngOnInit() {
   }

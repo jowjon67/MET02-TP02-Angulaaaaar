@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  mode: 'Local',
   backendProduit : '/assets/produit.json',
   backendCatalogue : '/assets/mock/toto.json'
 };

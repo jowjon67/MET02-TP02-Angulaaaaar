@@ -1,9 +1,9 @@
-export class Product {
+export interface Article {
     id:string;
-    nom:string;
-    prixEuro:number;
+    nom: string;
+    prixEuros:string;
     prixDollars:number;
     categorie:string;
     image:string;
     description:string;
-  }
+}
