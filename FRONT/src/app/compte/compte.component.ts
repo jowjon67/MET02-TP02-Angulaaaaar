@@ -12,8 +12,7 @@ export class CompteComponent implements OnInit
   ngOnInit() {
 
   }
-
-      civilite = ['M','Mlle', 'Mme'];
+    civilite = ['M','Mlle', 'Mme'];
       
     model = new Donnees(18, null, "EHRHARD", "Jonathan", "", "", "Mr-Jooo", "", "", "10 rue de la cité", null, "67114" );
 

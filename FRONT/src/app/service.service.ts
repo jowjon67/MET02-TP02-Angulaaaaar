@@ -13,7 +13,12 @@ export class Service {
   constructor(private http : HttpClient) { }
   
   public getProduitBackend() : Observable<any> {
-    return this.http.get (environment.backendProduit);
+    return this.http.get(environment.backendProduit);
   }
+/*
+  addClient(client : Client)
+  {
+
+  }*/
 
 }

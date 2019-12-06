@@ -5,8 +5,9 @@
 export const environment = {
   production: false,
   mode: 'Local',
-  backendProduit : '/assets/produit.json',
-  backendCatalogue : '/assets/mock/toto.json'
+  backendProduit : 'http://node12.codenvy.io:37106/jowjon67-MET02-TP02-Angulaaaaar/BACK/index.php/produit/',
+  backendCatalogue : '/assets/mock/toto.json',
+  backendConnexion: 'http://node20.codenvy.io:45064/backEnd/public/index.php/api'
 };
 
 /*

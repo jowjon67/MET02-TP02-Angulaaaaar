@@ -19,6 +19,7 @@ import { NgxsModule } from '@ngxs/store';
 
 import { PanierState } from 'shared/states/panier-state';
 import { CompteComponent } from './compte/compte.component';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 
 const appRoutes: Routes = [
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     RecapitulatifComponent,
     PhoneNumberPipe,
     ErrorDirective,
-    CompteComponent
+    CompteComponent,
+    ConnexionComponent
   ],
   imports: [
     NgxsModule.forRoot([
